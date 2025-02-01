@@ -72,6 +72,4 @@ export async function createIssue(issueRaw: Ticket) {
     .doc(issueRaw.data.id)
     .collection(collections.history)
   await historyColl.add(issueRaw)
-
-  console.log('Ticket updated successfully', issueRaw)
 }

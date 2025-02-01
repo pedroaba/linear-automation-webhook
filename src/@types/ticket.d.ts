@@ -88,3 +88,32 @@ export interface Ticket {
   webhookTimestamp: number
   webhookId: string
 }
+
+export type User = Assignee
+
+export type Comment = {
+  action: string
+  actor: Actor
+  createdAt: string
+  data: {
+    id: string
+    issue: {
+      id: string
+      title: string
+    }
+    resolvedAt?: string
+    issueId: string
+    parentId?: string
+    body: string
+    user: User
+    userId: string
+    updatedAt: string
+    bodyData: string
+    authorId: string
+  }
+  url: string
+  type: string
+  organizationId: string
+  webhookTimestamp: number
+  webhookId: string
+}
